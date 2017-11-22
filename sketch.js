@@ -46,10 +46,6 @@ function setup() {
 
 }
 
-function draw {
-
-}
-
 function checkOverlap(testShape, prevShape) {
   if (testShape.maxX > prevShape.x && testShape.x < prevShape.maxX && testShape.maxY > prevShape.y && testShape.y < prevShape.maxY) {
     return true;
