@@ -5,10 +5,6 @@ var maxWidth = cellSize * Math.round(window.innerWidth/cellSize) - cellSize;
 var maxHeight = cellSize * Math.round(window.innerHeight/cellSize) - cellSize;
 var img;
 
-function preload() {
-  three = loadImage("svg/three-corner.svg");
-}
-
 function setup() {
 
   createCanvas(windowWidth, windowHeight);
@@ -47,6 +43,10 @@ function setup() {
   for (var i = 0; i < shapeArray.length; i++) {
     shapeArray[i].show();
   }
+
+}
+
+function draw {
 
 }
 
