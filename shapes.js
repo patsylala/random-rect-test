@@ -11,28 +11,33 @@ function Shape(point) {
   }
 
   this.show = function() {
-
     fill(color(this.color));
     noStroke();
 
-    // if (this.maxX-this.x > 100) {
-    //   rect(this.x+10,this.y,(this.maxX-this.x)-20,this.maxY-this.y,5);
-    //   rect(this.x,this.y+10,(this.maxX-this.x),(this.maxY-this.y)-20,5);
-    // }
-    // else {
-    //   rect(this.x+5,this.y,(this.maxX-this.x)-10,this.maxY-this.y,3);
-    //   rect(this.x,this.y+5,(this.maxX-this.x),(this.maxY-this.y)-10,3);
-    // }
 
-    text(this.x + " " + this.maxX, this.x, this.y);
-    beginShape();
-    vertex(this.x, this.y);
-    // bezierVertex(this.x, this.y+5, this.x+5, this.y+5, this.x+5, this.y+5);
-    // bezierVertex(this.x+5, this.y+5, this.x+10, this.y+5, this.x+10, this.y);
-    vertex(this.maxX, this.y);
-    vertex(this.maxX, this.maxY);
-    vertex(this.x, this.maxY);
-    endShape();
+    if (this.maxX-this.x > 100) {
+      rect(this.x+10,this.y,(this.maxX-this.x)-20,this.maxY-this.y,5);
+      rect(this.x,this.y+10,(this.maxX-this.x),(this.maxY-this.y)-20,5);
+    }
+    else {
+      rect(this.x+5,this.y,(this.maxX-this.x)-10,this.maxY-this.y,3);
+      rect(this.x,this.y+5,(this.maxX-this.x),(this.maxY-this.y)-10,3);
+    }
+
+
+
+    // text(this.x + " " + this.maxX, this.x, this.y);
+    // beginShape();
+    // vertex(this.x, this.y);
+    // vertex(this.maxX, this.y);
+    // vertex(this.maxX, this.maxY);
+    // vertex(this.x, this.maxY);
+    // curveVertex(this.x, this.y+10);
+    // curveVertex(this.x+10, this.y+10);
+    // curveVertex(this.maxX, this.y);
+    // curveVertex(this.maxX, this.maxY);
+    // curveVertex(this.x, this.maxY);
+    // endShape();
   }
 
 }

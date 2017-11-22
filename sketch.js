@@ -1,7 +1,13 @@
 var shapeArray = [];
+var shapeNumber = 25;
 var cellSize = 40;
 var maxWidth = cellSize * Math.round(window.innerWidth/cellSize) - cellSize;
 var maxHeight = cellSize * Math.round(window.innerHeight/cellSize) - cellSize;
+var img;
+
+function preload() {
+  three = loadImage("svg/three-corner.svg");
+}
 
 function setup() {
 
@@ -20,7 +26,7 @@ function setup() {
 
   //create shapes
 
-  while (shapeArray.length < 20) {
+  while (shapeArray.length < shapeNumber) {
     var overlapping = false;
     var randomX = floor(random(1,((maxWidth)/cellSize))) * cellSize;
     var randomY = floor(random(1,((maxHeight)/cellSize))) * cellSize;
