@@ -24,8 +24,6 @@ function Shape(point) {
       rect(this.x,this.y+5,(this.maxX-this.x),(this.maxY-this.y)-10,3);
     }
 
-
-
     // text(this.x + " " + this.maxX, this.x, this.y);
     // beginShape();
     // vertex(this.x, this.y);
